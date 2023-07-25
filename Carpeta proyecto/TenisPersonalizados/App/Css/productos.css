@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Barra de navegación */
+  header {
+    background: linear-gradient(45deg, #820678, #04aeae);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ccc;
+  }
+  
+  /* Estilos para el botón desplegable */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 6px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .show .dropdown-content {
+    display: block;
+  }
+  
+  /* Estilos para las categorías y productos */
+  main {
+    padding: 20px;
+  }
+  
+  .categoria {
+    margin-bottom: 40px;
+  }
+  
+  .categoria-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .producto {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .producto-info {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .producto-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .producto-info p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .producto-info a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .producto-info a:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    background: linear-gradient(45deg, #820678, #04aeae);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  

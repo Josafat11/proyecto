@@ -1,0 +1,652 @@
+/*Apartado de pagina inicio*/
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("/App/Src/gato2.jpg");
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #000;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+/* Cabecera */
+header {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Sección de productos destacados */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.product-card a {
+  display: inline-block;
+  background-color: #3f83f8;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.product-card a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Sección de información adicional */
+section:nth-child(even) {
+  background-color: white;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.section-grid h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.section-grid p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Pie de página */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Animación de entrada en la página */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fade-in 1s ease-in-out;
+}
+.mobile-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #f0f0f0;
+  z-index: 9999;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.mobile-panel.open {
+  width: 250px;
+}
+
+.mobile-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ccc;
+}
+
+.mobile-panel-header h3 {
+  margin: 0;
+}
+
+.close-panel-btn {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mobile-panel-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-panel-links li {
+  padding: 1rem;
+}
+
+.mobile-panel-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.open-panel-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/*Apartado de estilo del Registrarse*/
+/* Estilos generales */
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #3f83f8;
+}
+
+/* Formulario de Registro */
+.registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fade-in 1s ease-in-out;
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #3f83f8;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  animation: slide-up 0.5s ease-in-out;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="tel"]:focus,
+.registration-form input[type="password"]:focus {
+  outline: none;
+  border-color: #3f83f8;
+}
+
+.registration-form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #3f83f8;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: slide-up 0.5s ease-in-out;
+}
+
+.registration-form input[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+/*Apartado para IniciarSesion*/
+
+.login-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*Apartado de AcercaDN*/
+
+
+.containerDN {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/*Apartado de Productos*/
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  background-color: #3f83f8;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e0e0e0;
+}
+
+/* Estilos para el botón desplegable */
+/* Estilos para el botón desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #434cc9;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 4px;
+  top: 100%; /* Mostrar el desplegable debajo del botón */
+  left: 50%; /* Centrar el desplegable horizontalmente */
+  transform: translateX(-50%); /* Alinear el desplegable al centro */
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 8px 0;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #e0e0e0;
+}
+
+.show {
+  display: block;
+}
+
+/* Estilos adicionales para el apartado de productos */
+
+h1 {
+  margin: 0;
+}
+
+main {
+  margin: 20px;
+}
+
+.categoria {
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.categoria h2 {
+  font-size: 24px;
+  color: #3f83f8;
+  margin-bottom: 10px;
+}
+
+.categoria p {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background-color: #c1bebe6c;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.producto-info {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.producto-info h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.producto-info p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.producto-info a {
+  display: inline-block;
+  background-color: #3f83f8;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.producto-info a:hover {
+  background-color: #1d4ed8;
+}
+
+footer {
+  background-color: #3f83f8;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Apartado de contacto*/
+#container7 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+#titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#descripcion {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+#formulario {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#redes-sociales {
+  margin-top: 30px;
+}
+
+#redes-sociales h3 {
+  margin-bottom: 10px;
+}
+
+#redes-sociales ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#redes-sociales ul li {
+  margin: 0 10px;
+}
+
+#redes-sociales ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+/* Estilos para el mensaje de éxito o error */
+.mensaje {
+  background-color: #dff0d8; /* Color verde claro para mensaje de éxito */
+  color: #3c763d; /* Color de texto para mensaje de éxito */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+}
+
+.mensaje.error {
+  background-color: #f2dede; /* Color rojo claro para mensaje de error */
+  color: #a94442; /* Color de texto para mensaje de error */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  background: linear-gradient(45deg, #820678, #04aeae);
+  padding: 1rem;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+.sneakart {
+  color: white;
+}
+
+.admin {
+  font-size: 1rem;
+  color: #00cccc;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+.error-message {
+  background-color: #f44336; /* Color de fondo rojo */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
